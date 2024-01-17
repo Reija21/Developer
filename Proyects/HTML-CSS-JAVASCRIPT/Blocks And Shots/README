@@ -1,0 +1,20 @@
+Shooting Blocks Game
+Descripción
+Este es un juego simple de bloques implementado en HTML, CSS y JavaScript. El jugador controla un objeto que puede moverse hacia la izquierda y hacia la derecha, disparando proyectiles para eliminar bloques enemigos. El objetivo es acumular la mayor puntuación posible al destruir bloques y evitar ser alcanzado por los proyectiles enemigos.
+
+Capturas de pantalla
+
+  
+Cómo jugar
+Abre el archivo index.html en tu navegador web.
+Haz clic en el botón "PLAY GAME" para iniciar el juego.
+Utiliza las teclas de flecha izquierda (←) y derecha (→) para moverte.
+Presiona la tecla de flecha arriba (↑) para disparar proyectiles y destruir bloques enemigos.
+Evita ser alcanzado por los proyectiles enemigos para mantener tu puntuación.
+Características
+Diseño simple y atractivo.
+Controles fáciles de usar con teclado.
+Explosiones y partículas al destruir bloques enemigos.
+Sistema de puntuación para rastrear tu rendimiento.
+Dependencias
+No se requieren dependencias externas. El juego utiliza fuentes de Google Fonts para una apariencia más agradable.
