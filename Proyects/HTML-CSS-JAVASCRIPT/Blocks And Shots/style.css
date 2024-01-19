@@ -1,70 +1,207 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;1,700&display=swap');
+/* DIEGO REIJA LOPEZ */
 
-*{
-    font-family: 'Ubuntu Mono', monospace;
+@import url(https://use.fontawesome.com/releases/v6.5.1/css/all.css);
+
+:root {
+    .black {color: #000000};
+    .white {color: #ffffff};
+    .red {color: #ff0000};
+    .gradient-1 {background: linear-gradient(150deg, #ff2600, #ff009d);
+                 background-clip: text;
+                 text-shadow: none;
+                 -webkit-background-clip: text;
+                 -webkit-text-fill-color: transparent;
+                 font-family: 'Arial Black', sans-serif;
+                 font-weight: bolder;};
+    .gray {color:rgb(17, 17, 17)};
+    .grey {color: #717571};
+
+}
+
+h1 {
+    position: absolute;
+    top: -2%;
+    font-size: 55px;
+    font-family: 'Arial Blac  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  k', sans-serif;
+    font-weight: bolder;
+    background: linear-gradient(150deg, #ff2600, #ff009d);
+    text-shadow: none;
+    text-align: left;
+    left: 5%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 100% del viewport height */
+    background-color: rgb(17, 17, 17);
 }
-body{
-    background-color: #121212;
+
+.item {
+    align-items: center;
+    /*background-color: #000000;*/
     width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.container{
-    position: relative;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.container .score-container{
-    position: absolute;
-    left: 12px;
-    top: 12px;
-    font-size: 20px;
-}
-.container .menu{
-    position: absolute;
-    display: none;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-}
-.container .menu h2{
-    font-size: 60px;
 }
 
-h2:hover {
-    color: red;
-}
-
-.container .menu:hover{
-    padding: 8px 40px;
-}
-
-.button {
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    padding: 10px 30px;
-    transition: 0.5s;
-    position: relative;
-    font-size: 17px;
-    background: #333;
-    border: none;
-    color: #fff;
+.container:-webkit-scrollbar {
+    width: 5px;
+  }
+   
+.container::-webkit-scrollbar-thumb {
+    background: transparent; 
+    border: 2px solid linear-gradient(150deg, var(--color7), var(--color6));  
+    border-radius: 25px;
 }
   
-.button:active {
-    scale: 0.92;
+.container::-webkit-scrollbar-track {
+    background-color: red; 
+}
+
+.container {
+    width: 90%;
+    height: 75%;
+    margin: 3%;
+    padding: 3%;
+    position: absolute;
+    top: 7%;
+    margin-left: 3%;
+    gap: 25px;
+    /*outline: 1px solid blue;*/
+    background: rgba(255, 255, 255, 0.037);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.9px);
+    -webkit-backdrop-filter: blur(2.9px);
+    border: 1px solid rgba(255, 255, 255, 0.19);
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(3);
+    grid-template-areas: 
+    "n1 n2 n3 n4 n5"
+    "n6 n7 n8 n9 n10"
+    "n13 n14 n15 n16";
+    overflow: hidden;
+}
+
+
+.card {
+    position: absolute;
+    height: 290px;
+    width: 237px;
+    min-width: 200px;
+    border-radius: 16px;
+    background: #131315;
+    transition: .2s;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+
+.card:hover {
+    transform: translateY(-0.4rem);
+  }
+    
+  .card-author {
+    position: relative;
+    display: flex;
+    grid-template-columns: 75px 1fr;
+    align-items: center;
+    margin: 3rem 0 0;
+  }
+    
+  .author-name {
+    color: #7a7a8c;
+  }
+    
+  .author-name-prefix {
+    color: #ff005d;
+    font-weight: 600;
+  }
+  
+  #fecha {
+      position: relative;
+      color: #ffffff;
+      text-align: right;
+      margin-top: 7%;
+      right: 10%;
+  }
+  
+  .author-avatar span {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f2f2f2;
+    margin: 10px 10px;
+  }
+    
+  .half-circle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 48px;
+    fill: none;
+    stroke: #ff4400;
+    stroke-width: 8;
+    stroke-linecap: round;
+  }
+    
+  .card-header {
+    margin-bottom: auto;
+    color: #42424c;
+  }
+    
+  .card-header p {
+    font-size: 14px;
+    margin: 0 0 1rem;
+    color: #42424c;
+  }
+    
+.card-header .title {
+    font-size: 27px;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+    font-family: 'Arial Black', sans-serif;
+}
+    
+.card-header .title:hover {
+    background: linear-gradient(90deg,#ff4400,#ff005d);
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#icon-1 {
+    position: absolute;
+    font-size: 45px;
+    left: 5%;
+    top: 80%;
+    color: #42424c;
 }
   
-.button:hover {
-    background: rgb(78, 2, 2);
-    background: linear-gradient(270deg, rgba(78, 2, 2, 0.681) 0%, rgba(232, 31, 31, 0.873) 60%);
-    color: rgb(214, 209, 209);
+#icon-2 {
+    position: absolute;
+    font-size: 45px;
+    top: 80%;
+    left: 22%;
+    color: #42424c;
+}
+  
+#icon-3 {
+    position: absolute;
+    font-size: 45px;
+    top: 80%;
+    left: 40%;
+    color: #42424c;
 }
